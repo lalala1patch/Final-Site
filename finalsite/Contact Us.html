@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		function validation(){
+			var name = document.getElementById("name").value;
+			var subject = document.getElementById("subject").value;
+			var email = document.getElementById("email").value;
+			var message = document.getElementById("message").value;
+			var error_message = document.getElementById("error_message");
+			var text;
+
+			error_message.style.padding = "10px";
+
+			if (name.length < 3){
+				text = "Please Enter Valid Name!!";
+				error_message.innerHTML = text;
+				return false;
+			}
+
+			if (subject.length < 4){
+				text = "Please Enter Correct Subject!!";
+				error_message.innerHTML = text;
+				return false;
+			}
+
+			if (email.indexOf("@gmail.com") == -1 || email.length <6)  {
+				text = "Please Enter Valid Email!!";
+				error_message.innerHTML = text;
+				return false;
+			}
+
+			if (message.length <= 20){
+				text = "Please Enter More than 20 Characters!!";
+				error_message.innerHTML = text;
+				return false;
+			}
+			alert("Form Submitted Successfully")
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="container"> 
+			<h1>Epic Games</h1>
+		</div>
+	</div>
+
+	<div class="navbar">
+		<div class="container">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="News and Updates.html">News & Updates</a></li>
+				<li><a href="Trending.html">Trending</a></li>
+				<li><a href="Gallery.html">Gallery</a></li>
+				<li><a href="Contact Us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- main area -->
+	<div class="main">
+		<div class="container">
+			<hr>
+			<h1>/Contact Us/</h1>
+			<hr>
+			<div class="contact">
+				<p><b>Phone no.</b>: 980-7654-321</p>
+				<p><b>Email</b>: epicgames2020@gmail.com</p>
+			</div>
+			<hr>
+			<hr>
+
+
+			<div class="wrapper">
+				<p>Please fill this form</p>
+				<div id="error_message"></div>
+					<form id="myform" onsubmit="return validation()">
+						<div class="input_field">
+							<input type="text" placeholder="Name" id="name">
+						</div>
+						<div class="input_field">
+							<input type="text" placeholder="Subject" id="subject">
+						</div>
+						<div class="input_field">
+							<input type="text" placeholder="Email" id="email">
+						</div>
+						<div class="input_field">
+							<textarea id="message" placeholder="Message"></textarea> 
+						</div>
+						<div class="btn">
+							<input type="submit" name="">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		Follow Us on;
+		<hr>
+		<div class="sili">
+			<ul>
+				<li><a target="_blank" href="https://www.facebook.com/"><img title="www.facebook.com"  src="images/fb.png"></a></li><p class="fb"><a target="_blank" href="https://www.facebook.com/">Facebook</a></p>
+				<li><a target="_blank" href="https://www.instagram.com/"><img title="www.instagram.com" src="images/ig.png"></a></li><p class="ig"><a target="_blank" href="https://www.instagram.com/">Instagram</a></p><br>
+				<li><a target="_blank" href="https://twitter.com/"><img title="www.twitter.com" src="images/twit.png"></li></a><p class="twit"><a target="_blank" href="https://twitter.com/">Twitter</a></p>
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			Copyright &copy; 2020 Epic Games. All Rights Reserved
+			<p>epicgames2020@gmail.com</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

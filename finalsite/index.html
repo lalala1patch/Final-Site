@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Epic Games</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="container"> 
+			<h1>Epic Games</h1>
+		</div>
+	</div>
+
+	<!-- naviagtion bar -->
+	<div class="navbar">
+		<div class="container">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="News and Updates.html">News & Updates</a></li>
+				<li><a href="Trending.html">Trending</a></li>
+				<li><a href="Gallery.html">Gallery</a></li>
+				<li><a href="Contact Us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- showcase -->
+	<div class="slider">
+		<div class="slideshow">	
+			<script>
+				var i = 0;
+				var images = [];
+				var time =3000;
+
+				images[0] = "images/bg1.jpg";
+				images[1] = "images/bg2.jpg";
+				images[2] = "images/bg3.jpg";
+				images[3] = "images/bg4.jpg";
+
+				function changeImg(){
+					document.slide.src =images[i];
+
+					if(i < images.length - 1){
+						i++;
+					}
+					else{
+						i= 0;
+					}
+					setTimeout("changeImg()", time);
+				}
+				window.onload = changeImg;
+			</script>
+		
+			<img name="slide" width="1000" height="500">
+		</div>
+	</div>
+
+	<!-- main area -->
+	<div class="main">
+		<div class="container">
+			<hr>
+			<h1>/Home/</h1>	
+			<hr>
+				<img class="valorant" src="images/valorant.jpg">
+				
+			<div class="valpar">	
+				<p>
+					Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game.	
+				</p>	
+			
+			</div>
+				<img class="apex" src="images/apex.jpg">
+			<div class="apexpar">
+				<p class="container">
+					Apex Legends is a free-to-play first-person shooter battle royale game developed by Respawn Entertainment and published by Electronic Arts. It was released for Microsoft Windows, PlayStation 4, and Xbox One on February 4, 2019, without any prior announcement or marketing. A Nintendo Switch version is planned for release in late 2020, along with cross-platform play between all supported platforms.
+				</p>
+			</div>
+			
+
+
+				<img class="fortnite" src="images/fortnite.jpg">
+			<div class="fortpar">
+				<p class="container">
+					Fortnite is an online video game developed by Epic Games and released in 2017. It is available in three distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite: Save the World, a cooperative shooter-survival game for up to four players to fight off zombie-like creatures and defend objects with fortifications they can build.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- sidebar -->
+	<div class="sidebar">
+		Follow Us on;
+		<hr>
+		<div class="sili">
+			<ul>
+				<li><a target="_blank" href="https://www.facebook.com/"><img title="www.facebook.com"  src="images/fb.png"></a></li><p class="fb"><a target="_blank" href="https://www.facebook.com/">Facebook</a></p>
+				<li><a target="_blank" href="https://www.instagram.com/"><img title="www.instagram.com" src="images/ig.png"></a></li><p class="ig"><a target="_blank" href="https://www.instagram.com/">Instagram</a></p><br>
+				<li><a target="_blank" href="https://twitter.com/"><img title="www.twitter.com" src="images/twit.png"></li></a><p class="twit"><a target="_blank" href="https://twitter.com/">Twitter</a></p>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		Copyright &copy; 2020 Epic Games. All Rights Reserved
+		<p>epicgames2020@gmail.com</p>
+	</div>
+</body>
+</html>
